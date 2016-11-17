@@ -33,3 +33,19 @@ npm install
 node test-random-sensors.js
 ```
 
+## run it with Docker
+
+[Docker](https://www.docker.com/what-docker) is a powerful tool which lets you launch applications without configuring
+anything, whatever your system configuration is, whatever your distro is. You can find installation instructions
+[here](https://www.docker.com/products/docker). You will also need
+[docker-compose](https://docs.docker.com/compose/install/) installed on your machine.
+
+### launch and use it
+
+To launch the generator, place yourself in the project directory and launch :
+
+```
+docker-compose up
+```
+
+And it's done. You can now connect your MQTT client to `127.0.0.1:1883` .
