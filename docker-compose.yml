@@ -1,0 +1,23 @@
+version: '2'
+services:
+  mosca:
+    image: matteocollina/mosca
+    ports:
+      - "80"
+      - "1883"
+    expose:
+      - "1883"
+    networks:
+      - mynet
+    hostname: mosca
+
+  random-sensors:
+    build: .
+    networks:
+      - mynet
+    depends_on:
+      - mosca
+
+networks:
+  mynet:
+    driver: bridge

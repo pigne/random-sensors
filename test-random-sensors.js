@@ -1,7 +1,7 @@
 let sensor = require('.');
 
 // test
-const broker = 'mqtt://127.0.0.1'
+const broker = 'mqtt://mosca'
 let sensors = [
   {
     name: 'temperatureChambre',

@@ -48,7 +48,7 @@ function randomId() {
 
 const RandomMQTTSensor = function (id, type, broker, freq) {
   this.id = typeof id === 'undefined' ? randomId() : id;
-  this.broker = typeof broker === 'undefined' ? 'mqtt://127.0.0.1' : broker;
+  this.broker = typeof broker === 'undefined' ? 'mqtt://mosca' : broker;
   if (typeof type === 'undefined') {
     this.type = SensorType.TEMPERATURE;
   } else if (!(type instanceof SensorType)) {
