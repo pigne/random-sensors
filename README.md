@@ -45,7 +45,7 @@ anything, whatever your system configuration is, whatever your distro is. You ca
 To launch the generator, place yourself in the project directory and launch :
 
 ```
-docker-compose up
+docker-compose up -d
 ```
 
 And it's done. You can now connect your MQTT client to `127.0.0.1:1883` .
