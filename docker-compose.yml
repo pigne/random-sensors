@@ -3,10 +3,11 @@ services:
   mosca:
     image: matteocollina/mosca
     ports:
-      - "80"
+      - "8080:80"
       - "1883"
     expose:
       - "1883"
+      - "8080"
     networks:
       - mynet
     hostname: mosca
