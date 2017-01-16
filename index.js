@@ -77,7 +77,7 @@ RandomMQTTSensor.prototype.handler = function (topic, message) {
 RandomMQTTSensor.prototype.send = function() {
 
   switch (this.type) {
-    case SensorType.TEMPERATURE: this.value =  10 + Math.floor(Math.random()*20); break;
+    case SensorType.TEMPERATURE: this.value =  this.value - 0.1 + Math.random()*0.2; break;
     case SensorType.POSITIVE_NUMBER: this.value = this.value - 1 + Math.floor(Math.random()*3); break;
     case SensorType.PERCENT: this.value = Math.min(1, Math.max(0, this.value - 0.1 + Math.random()*0.2)); break;
     case SensorType.ON_OFF: if( Math.random()>.9)  this.value = this.value === Value.ON ? Value.OFF : Value.ON; break;
