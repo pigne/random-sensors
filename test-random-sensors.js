@@ -1,16 +1,16 @@
 let sensor = require('.');
 
 // test
-const broker = 'mqtt://mosca'
+const broker = 'mqtt://localhost'
 let sensors = [
   {
     name: 'temperatureChambre',
-    type: sensor.SensorType.POSITIVE_NUMBER,
+    type: sensor.SensorType.TEMPERATURE,
     freq:1,
   },
   {
     name:  'temperatureSalleA111',
-    type: sensor.SensorType.POSITIVE_NUMBER,
+    type: sensor.SensorType.TEMPERATURE,
     freq:.5
   },
   {
