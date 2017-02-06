@@ -1,7 +1,12 @@
 let sensor = require('.');
 
 // test
-const broker = 'mqtt://localhost'
+
+let broker = 'mqtt://localhost'
+
+if(typeof process.env.BROKER_ADDRESS !== "undefined"){
+  broker = process.env.BROKER_ADDRESS;
+}
 let sensors = [
   {
     name: 'temperatureChambre',
