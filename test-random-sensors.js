@@ -9,29 +9,39 @@ if(typeof process.env.BROKER_ADDRESS !== "undefined"){
 }
 let sensors = [
   {
-    name: 'temperatureChambre',
+    name: 'Temperature Bureau N° '+Math.floor(Math.random()*100, 0),
     type: sensor.SensorType.TEMPERATURE,
     freq:1,
   },
   {
-    name:  'temperatureSalleA111',
+    name:  'Temperature Salle A111',
     type: sensor.SensorType.TEMPERATURE,
-    freq:.5
+    freq:1.5
   },
   {
-    name:  'MonAttention',
+    name:  'Charge Batterie Téléphone',
     type: sensor.SensorType.PERCENT,
-    freq:.5
+    freq:1
   },
   {
-    name:  'MesYeux',
+    name:  'Taux d\'humidité serre tropicale' ,
+    type: sensor.SensorType.PERCENT,
+    freq:0.3
+  },
+  {
+    name:  "Temperature Couloir",
+    type: sensor.SensorType.TEMPERATURE,
+    freq:0.5
+  },
+  {
+    name:  'Porte du Garage',
     type: sensor.SensorType.ON_OFF,
-    freq:.5
+    freq:0.5
   }
 
 ];
 
 
 
-sensors = sensors.map(s=>(new sensor.RandomMQTTSensor(s.name, s.type, broker, s.freq)));
+sensors = sensors.map(s=>(new sensor.RandomMQTTSensor({name : s.name, type: s.type, broker, freq: s.freq})));
 sensors.forEach(s => s.start());

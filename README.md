@@ -48,5 +48,4 @@ To launch the generator, place yourself in the project directory and launch :
 docker-compose up -d
 ```
 
-And it's done. You can now connect your MQTT client to `127.0.0.1:1883` via the MQTT port, and to `127.0.0.1:8080`
-via the WebSocket port.
+And it's done. You can now connect your MQTT client to `127.0.0.1:1883` via the MQTT port, and to `127.0.0.1:8080` via the WebSocket port.

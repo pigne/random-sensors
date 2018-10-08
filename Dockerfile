@@ -1,4 +1,4 @@
-FROM node:7
+FROM node
 
 # Create app directory
 RUN mkdir -p /usr/src/app
@@ -10,5 +10,6 @@ RUN npm install
 
 # Bundle app source
 COPY . /usr/src/app
+VOLUME /usr/src/app
 
 CMD [ "node", "test-random-sensors.js" ]
