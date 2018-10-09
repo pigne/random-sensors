@@ -35,7 +35,7 @@ let sensors = [
   },
   {
     name:  'Porte du Garage',
-    type: sensor.SensorType.ON_OFF,
+    type: sensor.SensorType.OPEN_CLOSE,
     freq:0.5
   }
 
