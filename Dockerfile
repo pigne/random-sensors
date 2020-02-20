@@ -10,6 +10,6 @@ RUN npm install
 
 # Bundle app source
 COPY . /usr/src/app
-VOLUME /usr/src/app
+# VOLUME /usr/src/app # no volume
 
 CMD [ "node", "test-random-sensors.js" ]

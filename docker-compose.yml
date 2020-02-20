@@ -12,5 +12,7 @@ services:
       - BROKER_ADDRESS=mqtt://mosca
     depends_on:
       - mosca
-    volumes:
-        - ".:/usr/src/app"
+    
+    # no volume
+    # volumes:
+    #     - ".:/usr/src/app"
