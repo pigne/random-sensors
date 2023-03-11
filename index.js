@@ -98,7 +98,7 @@ RandomMQTTSensor.prototype.send = function () {
   }
   //console.log("send", this.value.toString())
   const s = `{"name":"${this.name}", "value":"${this.value.toString()}", "type":"${propName(SensorType, this.type)}"}`
-  console.log('value/' + this.id, s);
+  //console.log('value/' + this.id, s);
   this.client.publish('value/' + this.id, s);
 }
 RandomMQTTSensor.prototype.start = function () {
