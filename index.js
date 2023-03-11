@@ -96,7 +96,7 @@ RandomMQTTSensor.prototype.send = function () {
     case SensorType.OPEN_CLOSE: if (Math.random() > .9) this.value = this.value === Value.OPEN ? Value.CLOSE : Value.OPEN; break;
     default: this.value = 0;
   }
-  console.log("send", this.value.toString())
+  //console.log("send", this.value.toString())
   const s = `{"name":"${this.name}", "value":"${this.value.toString()}", "type":"${propName(SensorType, this.type)}"}`
   console.log('value/' + this.id, s);
   this.client.publish('value/' + this.id, s);
